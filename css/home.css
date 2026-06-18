@@ -21,7 +21,7 @@ body{
 .banner{
     height:220px;
 
-    background:url('img/fondo3.jpg');
+    background:url('/img/fondo3.jpg');
     background-size:cover;
     background-position:center;
 
