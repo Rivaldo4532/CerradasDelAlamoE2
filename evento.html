@@ -4,97 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eventos y Convivencia</title>
+
 <link rel="stylesheet" href="css/pages.css">
 </head>
+
 <body>
 
 <div class="container">
 
     <h1>Eventos y Convivencia</h1>
 
+    <!-- KIOSCO -->
     <details class="card">
-        <summary> Reservación del Kiosco Comunitario</summary>
+        <summary>Reservación del Kiosco Comunitario</summary>
 
-        <p>
-            El kiosco es un espacio de convivencia para todos los residentes.
-        </p>
+        <p>El kiosco es un espacio de convivencia para todos los residentes.</p>
 
         <p>
             Toda solicitud de reservación deberá consultarse previamente con
             el Comité de Vecinos para verificar la disponibilidad de fecha y horario.
         </p>
 
-        <p>
-            La reservación únicamente será válida una vez autorizada por el Comité.
-        </p>
+        <p>La reservación únicamente será válida una vez autorizada por el Comité.</p>
     </details>
 
+    <!-- HORARIOS -->
     <details class="card">
-        <summary> Horarios Permitidos</summary>
+        <summary>Horarios Permitidos</summary>
 
-        <p>
-            <strong>Lunes a Jueves:</strong><br>
-            08:00 AM - 10:00 PM
-        </p>
+        <p><strong>Lunes a Jueves:</strong><br>08:00 AM - 10:00 PM</p>
 
-        <p>
-            <strong>Viernes y Sábado:</strong><br>
-            08:00 AM - 02:00 AM
-        </p>
+        <p><strong>Viernes y Sábado:</strong><br>08:00 AM - 02:00 AM</p>
 
-        <p>
-            <strong>Domingo:</strong><br>
-            08:00 AM - 11:00 PM
-        </p>
+        <p><strong>Domingo:</strong><br>08:00 AM - 11:00 PM</p>
     </details>
 
+    <!-- RESPETO EVENTOS -->
     <details class="card">
-        <summary> Respeto a Eventos Autorizados</summary>
+        <summary>Respeto a Eventos Autorizados</summary>
 
         <p>
             Cuando exista una reservación o evento previamente autorizado por
-            el Comité de Vecinos, se invita a todos los residentes y visitantes
-            a respetar la actividad programada.
+            el Comité de Vecinos, se invita a todos los residentes a respetar la actividad.
         </p>
 
         <p>
-            La colaboración y el respeto entre vecinos permiten que los espacios
-            comunes puedan ser disfrutados por toda la comunidad de manera
-            ordenada y segura.
+            La colaboración y el respeto entre vecinos permiten el buen uso de los espacios.
         </p>
     </details>
 
+    <!-- CONVIVENCIA -->
     <details class="card">
-        <summary> Convivencia y Respeto</summary>
+        <summary>Convivencia y Respeto</summary>
 
         <p>
-            Recordemos que dentro de nuestra comunidad habitan familias con bebés,
-            niños pequeños, adultos mayores y vecinos que laboran en horarios
-            tempranos.
+            Recordemos que vivimos en comunidad con familias, niños y adultos mayores.
         </p>
 
         <p>
-            Por respeto a todos, se solicita mantener niveles razonables de ruido,
-            cuidar las instalaciones y finalizar los eventos dentro de los horarios
-            establecidos.
+            Se solicita mantener el respeto, cuidar instalaciones y respetar horarios.
         </p>
     </details>
 
-    <div class="card event-empty">
+    <!-- EVENTO ZUMBA INTEGRADO -->
+    <div class="card">
 
-        <h3> Próximos Eventos</h3>
+        <img class="banner"
+        src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=80">
+
+        <h3>🧘 Clases de Zumba</h3>
 
         <p>
-            Actualmente no hay eventos programados.
+            Actividad de convivencia, ejercicio y bienestar para todos los vecinos.
+            Ambiente de respeto y armonía.
         </p>
+
+        <div class="schedule">
+
+            <div class="schedule-item">
+                <strong>Días</strong>
+                <span>Lunes, Miércoles y Viernes</span>
+            </div>
+
+            <div class="schedule-item">
+                <strong>Horario</strong>
+                <span>10:00 AM - INDEFINIDO</span>
+            </div>
+
+            <div class="schedule-item">
+                <strong>Lugar</strong>
+                <span>Área Kiosko</span>
+            </div>
+
+        </div>
+
+        <a class="btn" onclick="enviarWhatsApp()">
+            Confirmar asistencia por WhatsApp
+        </a>
 
     </div>
 
+    <!-- SIN EVENTOS -->
+    <div class="card event-empty">
+        <h3>Próximos Eventos</h3>
+        <p>Consulta las actividades programadas en esta sección.</p>
+    </div>
+
+    <!-- BOTÓN INICIO -->
     <a href="home.html" class="btn">
         Volver al Inicio
     </a>
 
 </div>
+
+<script>
+function enviarWhatsApp(){
+
+    let numero = "526572270051";
+
+    let mensaje = "Hola, confirmo mi asistencia a las clases de Zumba ";
+
+    let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
