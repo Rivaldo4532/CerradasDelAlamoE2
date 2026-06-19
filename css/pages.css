@@ -142,3 +142,160 @@ details p{
     margin-top:10px;
     line-height:1.5;
 }
+
+.intro-card{
+    text-align:center;
+}
+
+.notice-card h3{
+    margin-top:12px;
+    margin-bottom:10px;
+    color:#333;
+}
+
+.notice-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.notice-date{
+    font-size:12px;
+    color:#888;
+}
+
+.notice-category{
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.urgent{
+    background:#c0392b;
+}
+
+.committee{
+    background:#b59b45;
+}
+
+.event{
+    background:#27ae60;
+}
+
+.info-card{
+    border-left:5px solid #b59b45;
+}
+
+.status-card{
+    text-align:center;
+}
+
+.status-icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.status-card h3{
+    color:#b59b45;
+    margin-bottom:10px;
+}
+
+.gallery-text{
+    color:#666;
+    font-size:14px;
+}
+
+.image-card{
+    padding:10px;
+}
+
+.image-card .banner{
+    margin-bottom:0;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.image-card .banner:hover{
+    transform:scale(1.02);
+}
+
+.info-card{
+    border-left:5px solid #b59b45;
+}
+
+.update-box{
+    margin-top:12px;
+    background:#f5f5f5;
+    color:#666;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+    font-size:14px;
+}
+
+.image-card{
+    padding:12px;
+}
+
+.slider{
+    position:relative;
+}
+
+.slides{
+    position:relative;
+}
+
+.slide{
+    display:none;
+    width:100%;
+    border-radius:12px;
+}
+
+.slide.active{
+    display:block;
+}
+
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.55);
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}
+
+.slider-dots{
+    text-align:center;
+    margin-top:15px;
+}
+
+.dot{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#ccc;
+    margin:0 4px;
+}
+
+.dot.active{
+    background:#b59b45;
+}
