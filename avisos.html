@@ -3,33 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avisos</title>
+<title>Avisos Oficiales</title>
 <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
 
 <div class="container">
 
-    <h1>Avisos</h1>
+    <h1>📢 Avisos Oficiales</h1>
 
-    <div class="card">
-        
+    <div class="card info-card">
+
+        <h3>Centro de Comunicación</h3>
+
         <p>
-            Los comunicados oficiales del comité y de la comunidad
-            aparecerán aquí cuando estén disponibles.
+            Bienvenido al centro de avisos de Cerradas del Álamo II.
+            Aquí se publicarán comunicados, eventos, acuerdos del comité,
+            información de seguridad y avisos relevantes para la comunidad.
         </p>
-
-         
 
     </div>
 
     <div class="card">
 
-        <img src="img/avisosssss.jpeg" class="banner">
+        <h3>📌 Comunicados de la Comunidad</h3>
 
-        
+        <p>
+            En este espacio se compartirán avisos importantes, acuerdos,
+            información de seguridad, eventos y comunicados de interés
+            para todos los residentes.
+        </p>
 
-      
+        <div class="update-box">
+            Última actualización: Junio 2026
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h3>🖼️ Comunicados Publicados</h3>
+
+        <p>
+            Desliza o utiliza las flechas para consultar los avisos
+            compartidos por el Comité de Vecinos.
+        </p>
+
+    </div>
+
+    <div class="card image-card">
+
+        <div class="slider">
+
+            <button class="slider-btn prev">
+                &#10094;
+            </button>
+
+            <div class="slides">
+
+                <img src="img/avisosssss.jpeg" class="slide active">
+                <img src="img/pluma.jpeg.jpg" class="slide active">
+              
+
+
+                <!-- FUTURAS IMÁGENES -->
+                <!--
+                <img src="img/aviso2.jpeg" class="slide">
+                <img src="img/aviso3.jpeg" class="slide">
+                -->
+
+            </div>
+
+            <button class="slider-btn next">
+                &#10095;
+            </button>
+
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active"></span>
+        </div>
+
     </div>
 
     <a href="home.html" class="btn">
@@ -37,6 +91,68 @@
     </a>
 
 </div>
+
+<script>
+
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+let current = 0;
+
+function showSlide(index){
+
+    slides.forEach(slide=>{
+        slide.classList.remove('active');
+    });
+
+    dots.forEach(dot=>{
+        dot.classList.remove('active');
+    });
+
+    slides[index].classList.add('active');
+
+    if(dots[index]){
+        dots[index].classList.add('active');
+    }
+}
+
+document.querySelector('.next').addEventListener('click',()=>{
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    showSlide(current);
+
+});
+
+document.querySelector('.prev').addEventListener('click',()=>{
+
+    current--;
+
+    if(current < 0){
+        current = slides.length - 1;
+    }
+
+    showSlide(current);
+
+});
+
+setInterval(()=>{
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    showSlide(current);
+
+},5000);
+
+</script>
 
 </body>
 </html>
